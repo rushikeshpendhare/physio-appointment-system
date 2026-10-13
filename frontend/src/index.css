@@ -1,0 +1,209 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+}
+
+.container { max-width: 900px; margin: 0 auto; padding: 24px; }
+
+.center-box {
+  max-width: 420px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+h1, h2, h3 { margin-top: 0; }
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #0e7c86;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+button:hover { background: #0b656d; }
+button.secondary { background: #fff; color: #0e7c86; border: 1px solid #0e7c86; }
+button.danger { background: #d32f2f; }
+
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+  margin-bottom: 14px;
+}
+
+.row { display: flex; gap: 12px; flex-wrap: wrap; }
+.row > .card { flex: 1; min-width: 220px; }
+
+.error { color: #d32f2f; margin-bottom: 10px; }
+.success { color: #2e7d32; margin-bottom: 10px; }
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* ---------- Landing page ---------- */
+.landing {
+  min-height: 100vh;
+  background: #f3f7f8;
+  color: #0f2a35;
+  font-family: "Source Sans 3", Arial, sans-serif;
+}
+
+.landing-nav {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing-brand {
+  font-family: "Bricolage Grotesque", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+
+.landing-main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 24px 72px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.landing-main h1 {
+  font-family: "Bricolage Grotesque", Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.3rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+}
+
+.landing-main .lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 34rem;
+  margin: 0 0 30px;
+  color: #3d5762;
+}
+
+.landing-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.landing .btn-primary {
+  background: #0e7c86;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #0e7c86;
+}
+.landing .btn-primary:hover { background: #0b656d; border-color: #0b656d; }
+
+.landing .btn-outline {
+  background: transparent;
+  color: #0f2a35;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #0f2a35;
+}
+.landing .btn-outline:hover { background: #0f2a35; color: #fff; }
+
+.landing .nav-link {
+  background: transparent;
+  color: #0f2a35;
+  padding: 8px 14px;
+  font-weight: 600;
+  border: 1px solid #b8cdd2;
+  border-radius: 8px;
+}
+.landing .nav-link:hover { background: #e3eef0; }
+
+.schedule {
+  background: #fff;
+  border: 1px solid #cfe0e3;
+  border-radius: 18px;
+  padding: 26px;
+}
+
+.schedule-head { display: flex; gap: 14px; align-items: center; margin-bottom: 22px; }
+
+.schedule-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #d5e9ea;
+  color: #0b656d;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule-name { font-weight: 600; font-size: 1.1rem; }
+.schedule-sub { color: #5b727b; font-size: 0.95rem; }
+.schedule-fee { margin-left: auto; font-weight: 600; text-align: right; }
+
+.schedule-label { color: #5b727b; font-size: 0.95rem; margin-bottom: 10px; }
+
+.slot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+
+.slot {
+  padding: 11px 0;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1.5px solid #0e7c86;
+  color: #0e7c86;
+}
+.slot.booked {
+  border-color: #e1eaec;
+  background: #e8eff1;
+  color: #8aa0a7;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.slot.selected { background: #0e7c86; color: #fff; }
+
+.schedule-foot {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e1eaec;
+  color: #3d5762;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 820px) {
+  .landing-main { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .landing-main h1 { font-size: 2rem; overflow-wrap: break-word; }
+  .schedule { padding: 18px; }
+}
